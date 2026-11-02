@@ -1,26 +1,117 @@
+
 <div class="app-shell">
+
+  <!-- Sidebar section -->
   <aside class="sidebar">
+
+    <!-- Restaurant logo and name -->
     <a class="brand" routerLink="/reservations" aria-label="Spicy Zone home">
       <span class="brand-mark">S</span>
       <span class="brand-name">Spicy Zone</span>
     </a>
+
+    <!-- Restaurant information -->
     <div class="venue-switcher">
       <span class="venue-avatar">SZ</span>
-      <span class="venue-copy"><strong>Spicy Zone</strong><small>Kolkata</small></span>
+
+      <span class="venue-copy">
+        <strong>Spicy Zone</strong>
+        <small>Kolkata</small>
+      </span>
+
       <span class="switch-chevron" aria-hidden="true">⌄</span>
     </div>
+
+    <!-- Navigation menu -->
     <span class="nav-caption">SERVICE</span>
+
     <nav class="primary-nav" aria-label="Main navigation">
-      <a routerLink="/reservations" routerLinkActive="active" ariaCurrentWhenActive="page"><span class="nav-icon">▤</span><span>Reservations</span><span class="nav-count">{{ restaurant.reservations().length }}</span></a>
-      <a routerLink="/floor-plan" routerLinkActive="active" ariaCurrentWhenActive="page"><span class="nav-icon floor-icon">▦</span><span>Floor plan</span></a>
+
+      <a routerLink="/reservations"
+         routerLinkActive="active"
+         ariaCurrentWhenActive="page">
+
+        <span class="nav-icon">▤</span>
+        <span>Reservations</span>
+        <span class="nav-count">{{ restaurant.reservations().length }}</span>
+
+      </a>
+
+      <a routerLink="/floor-plan"
+         routerLinkActive="active"
+         ariaCurrentWhenActive="page">
+
+        <span class="nav-icon floor-icon">▦</span>
+        <span>Floor plan</span>
+
+      </a>
+
     </nav>
+
+    <!-- Bottom sidebar section -->
     <div class="sidebar-bottom">
-      <div class="service-status"><span class="status-pulse"></span><span><strong>Service is live</strong><small>Evening service · 5:00–10:00 pm</small></span></div>
-      <div class="profile"><span class="profile-avatar">S</span><span><strong>Sankhadeep</strong><small>Restaurant manager</small></span><button class="profile-more" aria-label="Profile options">···</button></div>
+
+      <div class="service-status">
+        <span class="status-pulse"></span>
+
+        <span>
+          <strong>Service is live</strong>
+          <small>Evening service · 5:00–10:00 pm</small>
+        </span>
+      </div>
+
+      <!-- Manager profile -->
+      <div class="profile">
+
+        <span class="profile-avatar">S</span>
+
+        <span>
+          <strong>Sankhadeep</strong>
+          <small>Restaurant manager</small>
+        </span>
+
+        <button class="profile-more" aria-label="Profile options">
+          ···
+        </button>
+
+      </div>
+
     </div>
+
   </aside>
+
+  <!-- Main content section -->
   <main class="main-area">
-    <header class="topbar"><div class="breadcrumb"><span>Spicy Zone</span><span class="crumb-slash">/</span><strong>{{ currentSection() }}</strong></div><div class="topbar-actions"><span class="service-date">{{ todayLabel }}</span><span class="open-indicator"><span></span> Open</span><button class="avatar-small" aria-label="Spicy Zone profile">SZ</button></div></header>
+
+    <!-- Top navigation bar -->
+    <header class="topbar">
+
+      <div class="breadcrumb">
+        <span>Spicy Zone</span>
+        <span class="crumb-slash">/</span>
+        <strong>{{ currentSection() }}</strong>
+      </div>
+
+      <div class="topbar-actions">
+
+        <span class="service-date">{{ todayLabel }}</span>
+
+        <span class="open-indicator">
+          <span></span>
+          Open
+        </span>
+
+        <button class="avatar-small" aria-label="Spicy Zone profile">
+          SZ
+        </button>
+
+      </div>
+
+    </header>
+
+    <!-- Page content will load here -->
     <router-outlet></router-outlet>
+
   </main>
+
 </div>
