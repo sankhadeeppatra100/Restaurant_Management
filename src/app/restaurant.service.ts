@@ -26,11 +26,11 @@ export interface DiningTable {
 export class RestaurantService {
   readonly reservations = signal<Reservation[]>([
     { id: 1, guest: 'Ava Patel', initials: 'AP', time: '5:30 pm', guests: 2, table: 'T01', phone: '(503) 555-0182', status: 'Confirmed' },
-    { id: 2, guest: 'Noah Williams', initials: 'NW', time: '5:45 pm', guests: 4, table: 'T04', phone: '(503) 555-0144', status: 'Seated' },
-    { id: 3, guest: 'Mia Chen', initials: 'MC', time: '6:00 pm', guests: 2, table: 'T03', phone: '(503) 555-0118', status: 'Confirmed', note: 'Window seat, if available' },
-    { id: 4, guest: 'Theo Martin', initials: 'TM', time: '6:30 pm', guests: 6, table: 'T06', phone: '(503) 555-0191', status: 'Confirmed' },
-    { id: 5, guest: 'Leila James', initials: 'LJ', time: '7:00 pm', guests: 3, table: 'T02', phone: '(503) 555-0163', status: 'Confirmed' },
-    { id: 6, guest: 'Sam Rivera', initials: 'SR', time: '7:15 pm', guests: 4, table: 'T05', phone: '(503) 555-0127', status: 'Seated' },
+    { id: 2, guest: 'akash', initials: 'NW', time: '5:45 pm', guests: 4, table: 'T04', phone: '(503) 555-0144', status: 'Seated' },
+    { id: 3, guest: 'deep', initials: 'MC', time: '6:00 pm', guests: 2, table: 'T03', phone: '(503) 555-0118', status: 'Confirmed', note: 'Window seat, if available' },
+    { id: 4, guest: 'sankha', initials: 'TM', time: '6:30 pm', guests: 6, table: 'T06', phone: '(503) 555-0191', status: 'Confirmed' },
+    { id: 5, guest: 'ranit', initials: 'LJ', time: '7:00 pm', guests: 3, table: 'T02', phone: '(503) 555-0163', status: 'Confirmed' },
+    { id: 6, guest: 'Sam ', initials: 'SR', time: '7:15 pm', guests: 4, table: 'T05', phone: '(503) 555-0127', status: 'Seated' },
   ]);
 
   readonly tables = signal<DiningTable[]>([
